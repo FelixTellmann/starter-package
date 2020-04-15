@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect, CSSProperties } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import './Border.scss';
 
 type BorderProps = {
@@ -9,7 +9,7 @@ type BorderProps = {
 }
 
 export const Border: FC<BorderProps> = ({ loading, duration, width, color }) => {
-  const [loop, setLoop] = useState(loading ? 'infinite' : 0.5);
+  const [loop, setLoop] = useState(loading ? 'infinite' : 1);
   const style: any = {
     '--border-width': `${width}`,
     '--border-color': `${color}`,
