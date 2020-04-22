@@ -14,8 +14,9 @@ function Layout({ pageProps, Component }: Props) {
 
   return (
     <div className="popup" onClick={() => setIsloading(!isLoading)}>
-      <Border loading={isLoading} width="6px" duration={4}
+      <Border loading={isLoading} width="2px" duration={4}
               color={`linear-gradient(180deg, ${theme.color_accent_primary}, ${theme.color_accent_secondary})`} />
+      <img src="/apple-touch-icon.png" alt="" />
       <Component {...pageProps} />
     </div>
   );

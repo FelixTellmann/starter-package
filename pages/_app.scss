@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-html {
+*, *:before, *:after {
   box-sizing: border-box;
-  margin-left: calc(100vw - 100%);
+}
+
+html {
+  /*margin-left: calc(100vw - 100%);*/
   /* Load system fonts */
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
   /* Make type rendering look crisper */
@@ -27,10 +30,6 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
 }
 
 body, td, th, input, textarea {
@@ -104,59 +103,4 @@ button, input, select, textarea {
 
 :focus {
   outline: -webkit-focus-ring-color auto 0;
-}
-
-.old-wrapper {
-  display: block;
-  max-width: 1670px;
-  max-height: 100%;
-  margin: auto;
-  @media (min-width: 768px) {
-    width: 725px;
-  }
-  @media (min-width: 992px) {
-    width: 945px;
-  }
-  @media (min-width: 1200px) {
-    width: 1145px;
-  }
-  @media (min-width: 1300px) {
-    width: 1270px;
-  }
-  @media (min-width: 1400px) {
-    width: 1370px;
-  }
-  @media (min-width: 1500px) {
-    width: 1470px;
-  }
-  @media (min-width: 1700px) {
-    width: 1670px;
-  }
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 340px 1060px 1fr;
-  grid-template-rows: 140px 1fr 100px;
-  grid-template-areas: ". header header ." ". aside main ." ". footer footer .";
-  min-height: 100vh;
-  padding: 0 30px;
-  background-color: #f4f6f8;
-  color: #161d25;
-}
-
-.layout__head {
-  grid-area: header;
-}
-
-.layout__aside {
-  grid-area: aside;
-}
-
-.layout__main {
-  grid-area: main;
-}
-
-.layout__footer {
-  grid-area: footer;
 }
